@@ -1,0 +1,142 @@
+/*===WHOLE PAGE===*/
+/*
+Affects the main page.
+*/
+body {
+    font-family: 'Nunito';
+    background-color: black;
+    color:white;
+}
+/*
+Displays the Left and Right Sides as Flex, so that they are side-by-side.
+*/
+#main-container {
+    display:flex;
+    flex-direction:row;
+    /*Covers full height of the browser window.*/
+    height:100%;
+}
+
+
+
+
+
+
+/*===LEFT SIDE===*/
+/*
+The container for all contents in the Left Side of the main box.
+*/
+#left-box {
+    width:40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    border-radius:10% 0 0 10%;
+}
+
+/*
+Top container on Left Side. Contains: top text, colour image, temperature readings.
+*/
+#left-main {
+    /*15% distance from top of the main box.*/
+    padding: 15% 0 0 0;
+    /*Aligns "Bristol Now" and temp readings to center of the Left Side.*/
+    text-align: center;
+}
+
+/*
+Changes the font size of <p> in the top container.
+*/
+#left-main p{
+    font-size: 120%;
+}
+
+/*
+Changes the aspects of the colour image in the top container.
+*/
+#left-main-image {
+    width:30%;
+    margin:auto;
+    display:block;
+}
+
+/*
+Bottom container within the Left Side. Contains: Wind, Rain Probability and Humidity.
+*/
+#left-sub {
+    /*Flex container makes sure the segments within are displayed side-by-side.*/
+    display:flex;
+    flex-direction: row;
+}
+
+/*
+Wind, Rain Probability and Humidity are contained within 3 smaller segments inside the Bottom container.
+*/
+.left-segment {
+    padding:5% 0 0 2%;
+    width:30%;
+    text-align: center;
+}
+
+/*
+Changes the aspects of the icon images within the 3 segments.
+*/
+.left-segment img{
+    height:8%;
+}
+
+
+
+
+
+/*===RIGHT SIDE===*/
+/*
+The container for all contents in the Right Side of the main box.
+*/
+#right-box{
+    width:60%;
+    background-color: rgb(37, 37, 37);
+    border-radius:0 10% 10% 0;
+}
+
+/*
+Changes "This Week".
+*/
+#right-box h1{
+    text-align: center;
+    padding:15% 0 0 0;
+}
+
+/*
+This is a container within the Right Side that contains segments for each day.
+*/
+#right-sub {
+    /*Display Flex to make sure each segment within the Right Side is side-by-side.*/
+    display:flex;
+    flex-direction: row;
+}
+
+/*
+The smaller segments for each day.
+*/
+.right-segment {
+    padding:10% 0 0 0;
+    width:20%;
+    text-align: center;
+}
+
+/*
+Changes the icon images within each segment.
+*/
+.right-segment img{
+    height:11%;
+}
+
+/*
+An identifier for the temperatures so that they can be changed indepentenly from the other aspects of the segments.
+*/
+.right-temps {
+    padding:10% 0 0 0;
+}
+.right-temps p{
+    margin:0;
+}
